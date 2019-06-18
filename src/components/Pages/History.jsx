@@ -1,9 +1,9 @@
 import React from "react"
 
-const Historial = ({match, location, history}) => (
+const History = ({match, location, history}) => (
     <div>
         { JSON.stringify(history) }
     </div>
 )
 
-export default Historial
+export default History

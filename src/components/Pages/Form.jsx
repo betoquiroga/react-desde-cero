@@ -1,24 +1,24 @@
 import React, {Component} from "react"
 
-class Formulario extends Component {
+class Form extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            nombre: "",
+            name: "",
             correo: "",
             fecha: new Date()
         }
 
-        this.cambiarNombre = this.cambiarNombre.bind(this)
+        this.changeName = this.changeName.bind(this)
         this.cambiarCorreo = this.cambiarCorreo.bind(this)
         this.cambiarFecha = this.cambiarFecha.bind(this)
     }
 
-    cambiarNombre(e) {
+    changeName(e) {
         this.setState({
-            nombre: e.target.value
+            name: e.target.value
         })
     }
 
@@ -39,13 +39,13 @@ class Formulario extends Component {
             <div className="ed-grid">
                 <h1>Formulario {this.props.name}</h1>
                 <h4>Fecha actual: {Math.ceil(this.state.fecha/1000)}</h4>
-                <form id="elemento">
+                <form id="form-element">
                     <div className="ed-grid m-grid-2">
                         <div className="form__item">
                             <label>Nombre completo</label>
                             <input
                                 type="text"
-                                onChange={this.cambiarNombre} 
+                                onChange={this.changeName} 
                             />
                         </div>
                         <div className="form__item">
@@ -67,8 +67,8 @@ class Formulario extends Component {
     
     
     componentDidMount() {
-        let elemento = document.getElementById("elemento")
-        console.log(elemento)
+        let element = document.getElementById("form-element")
+        console.log(element)
 
 
         this.intervaloFecha = setInterval(() => {
@@ -89,4 +89,4 @@ class Formulario extends Component {
 
 }
 
-export default Formulario
+export default Form
