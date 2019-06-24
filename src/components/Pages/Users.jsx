@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import UserCard from "../Molecules/UserCard"
 import axios from "axios"
 import UsersGrid from "../Organisms/UsersGrid";
 
