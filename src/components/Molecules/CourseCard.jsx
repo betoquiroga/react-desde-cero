@@ -15,7 +15,7 @@ const CourseCard = ({id, title, image, price, professor}) => (
                 { professor }
             </div>
             <div className="s-main-center">
-                <a className="button--ghost-alert button--tiny" href="https://ed.team">{ `$ ${price} USD`} </a>
+                <button className="button--ghost-alert button--tiny">{ `$ ${price} USD`} </button>
             </div>
         </div>
     </article>
